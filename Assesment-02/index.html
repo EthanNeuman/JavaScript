@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesment 2</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/scripts.js"></script>
+</head>
+<body>
+    <form>
+        <label for="customer-name">Customer Name:</label>
+        <input type="text" id="customer-name" placeholder="Enter your name">
+
+        <label for="drinks">Drinks:</label>
+        <select id="drinks">
+            <option value="0">Select</option>
+            <option value="1.5">Coke</option>
+            <option value="2">Pepsi</option>
+            <option value="1.8">Sprite</option>
+            <option value="2.5">Iced Tea</option>
+            <option value="1.2">Water</option>
+        </select>
+
+        <label for="sandwiches">Sandwiches:</label>
+        <select id="sandwiches">
+            <option value="0">Select</option>
+            <option value="5">Hamburger</option>
+            <option value="4.5">Cheeseburger</option>
+            <option value="6">Chicken wrap</option>
+            <option value="5.5">BLT</option>
+            <option value="4">steak Wrap</option>
+        </select>
+
+        <label for="desserts">Desserts/Sides:</label>
+        <select id="desserts">
+            <option value="0">Select</option>
+            <option value="3">Ice Cream</option>
+            <option value="2.5">Fries</option>
+            <option value="4">Cheese Fries</option>
+            <option value="2">Coleslaw</option>
+            <option value="1.8">Brownie</option>
+        </select>
+
+        <button type="button" onclick="calculateTotal()">Place Order</button>
+
+        <div id="order-summary"></div>
+    </form>
+</body>
+</html>
