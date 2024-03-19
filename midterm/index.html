@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/styles.css">
+<script src="scripts/scripts.js"></script>
+<title>Custom Computer's</title>
+
+</head>
+<body>
+    <div class="navbar">
+        <select onchange="navigateToSection(this.value)">
+            <option value="" selected disabled>Home</option>
+            <option value="#pcInfoSection">PC Info</option>
+            <option value="#latestReleasesSection">Latest Releases</option>
+            <option value="#popularComponentsSection">Popular Components</option>
+            <option value="#buildingTipsSection">Building Tips</option>
+            <option value="#gamingPCSection">Gaming PC Offer</option>
+            <option value="#customPCSection">Customize Your PC</option>
+        </select>
+    </div>
+<div class="bg"></div>
+<div class="container">
+    <h1 id="pcInfoSection">Custom Computer's</h1>
+
+    <p id="pcInfo"></p>
+
+    <button onclick="showPCInfo()">Show PC Information</button>
+
+    <div class="section" id="latestReleasesSection">
+        <h2>Latest PC Releases</h2>
+        <p>Discover the newest PC models and hardware releases to stay up-to-date with the latest technology.</p>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('latestReleases')">Discover</button>
+            <div class="dropdown-content" id="latestReleases">
+                <p>Latest PC releases:</p>
+                <p>- PC Model 1: Basic model with standard components.</p>
+                <p>- PC Model 2: Medium tier build with upgraded components. </p>
+                <p>- PC Model 3: Most popular build with high grade components.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="popularComponentsSection">
+        <h2>Popular PC Components</h2>
+        <p>Explore the most popular PC components, including processors, graphics cards, and more, based on user ratings and reviews.</p>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('popularComponents')">Explore</button>
+            <div class="dropdown-content" id="popularComponents">
+                <p>Popular PC components:</p>
+                <p>- Processor 1. Intel Core i9-14900k 2. Ryzen 7950X 16-core-32-Thread</p>
+                <p>- Graphics Card 1. Msi GeForce RTX 4090 Trio Graphics Cards 2. </p>
+                <p>- Memory C</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="buildingTipsSection">
+        <h2>PC Building Tips</h2>
+        <p>Get expert tips and advice for building your own PC, from selecting the right components to assembling and optimizing your system for maximum performance.</p>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('buildingTips')">Get Tips</button>
+            <div class="dropdown-content" id="buildingTips">
+                <p>PC building tips:</p>
+                <p>- Tip 1: Choose compatible components</p>
+                <p>- Tip 2: Video of how to install components carefully</p>
+                <p>- Tip 3: Optimize for overclocking</p>
+        </div>
+    </div>
+
+    <div class="section" id="gamingPCSection">
+        <h2>Special Offer: Gaming PC</h2>
+        <p>Check out our exclusive gaming PC offer featuring high-performance components for an immersive gaming experience.</p>
+        <div class="dropdown">
+            <button onclick="toggleDropdown('gamingPC')">View Offer</button>
+            <div class="dropdown-content" id="gamingPC">
+                <p>Special offer:</p>
+                <p>- Offer 1: PC custom build for 1000$ </p>
+                <p>- Offer 2: PC custom build for 1500$ </p>
+                <p>- Offer 3: PC custom build for 2000$ </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="customPCSection">
+        <h2>Customize Your PC</h2>
+        <p>Customize your PC specifications:</p>
+        <form id="customPCForm">
+            <label for="processor">Processor:</label>
+            <input type="text" id="processor" name="processor"><br><br>
+
+            <label for="gpu">GPU:</label>
+            <input type="text" id="gpu" name="gpu"><br><br>
+
+            <label for="ram">RAM:</label>
+            <input type="text" id="ram" name="ram"><br><br>
+
+            <label for="storage">Storage:</label>
+            <input type="text" id="storage" name="storage"><br><br>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price"><br><br>
+
+            <button type="button" onclick="updatePCInfo()">Update PC Information</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
