@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jason Basics</title>
+</head>
+<body>
+
+<script>
+fetch('albums.json')
+  .then(response => response.json())
+  .then(data => console.log('Albums:', data))
+  .catch(error => console.error('Error loading albums.json:', error));
+
+fetch('songs.json')
+  .then(response => response.json())
+  .then(data => console.log('Songs:', data))
+  .catch(error => console.error('Error loading songs.json:', error));
+</script>
+
+</body>
+</html>
